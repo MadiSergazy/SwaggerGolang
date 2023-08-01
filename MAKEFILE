@@ -1,0 +1,8 @@
+swag:
+	swag init -g ginsimple/main.go --output docs/ginsimple
+
+init: 
+	go get -u github.com/gin-gonic/gin
+	go get -v github.com/swaggo/swag/cmd/swag
+	go get -v github.com/swaggo/gin-swagger
+	go get -v github.com/swaggo/files
