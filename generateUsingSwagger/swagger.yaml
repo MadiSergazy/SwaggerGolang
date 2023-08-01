@@ -1,0 +1,34 @@
+swagger: '2.0'
+info:
+  title: Todo API
+  description: A simple Todo API
+  version: 1.0.0
+basePath: /api/v1
+schemes:
+  - http
+paths:
+  /todos:
+    get:
+      summary: List all todos
+      responses:
+        200:
+          description: An array of todos
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Todo'
+definitions:
+  Todo:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      title:
+        type: string
+      completed:
+        type: boolean
+    required:
+      - id
+      - title
+      - completed
